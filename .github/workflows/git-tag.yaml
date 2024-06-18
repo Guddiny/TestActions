@@ -29,6 +29,7 @@ jobs:
         id: calculate_new_tag
         run: |
           latest_tag=${{ steps.get_latest_tag.outputs.tag }}
+          echo "Latest tag: $latest_tag"
           if [ "$latest_tag" = "0" ]; then
             new_tag="1"
           else
